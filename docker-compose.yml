@@ -1,0 +1,14 @@
+# Mount additional volumes with:
+# - /home/polyc/decks:/decks:rw
+
+services:
+  xmage:
+    build: ./xmage-image
+    container_name: xmage-novnc
+    volumes:
+      - /path/to/xmage/launcher/root/folder:/xmage:rw
+    ports:
+      - "6080:6080"
+      - "17171:17171"
+      - "17179:17179"
+    restart: unless-stopped
