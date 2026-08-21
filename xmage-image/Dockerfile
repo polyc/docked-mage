@@ -3,9 +3,8 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DISPLAY=:1
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     openjdk-8-jre \
-    xvfb \
     fluxbox \
     tigervnc-standalone-server \
     novnc \
